@@ -1,8 +1,9 @@
-import { useState } from 'react';
+import { useState } from "react";
 
-import reactLogo from './assets/react.svg';
-import viteLogo from './assets/vite.svg';
-import './App.css';
+import reactLogo from "./assets/react.svg";
+import viteLogo from "./assets/vite.svg";
+import "./App.css";
+import SumCalculator from "./SumCalculator";
 
 const App = () => {
   const [count, setCount] = useState(0);
@@ -10,23 +11,29 @@ const App = () => {
   return (
     <>
       <div>
-        <a href='https://vite.dev' rel='noreferrer' target='_blank'>
-          <img alt='Vite logo' className='logo' src={viteLogo} />
+        <a href="https://vite.dev" rel="noreferrer" target="_blank">
+          <img alt="Vite logo" className="logo" src={viteLogo} />
         </a>
-        <a href='https://react.dev' rel='noreferrer' target='_blank'>
-          <img alt='React logo' className='logo react' src={reactLogo} />
+        <a href="https://react.dev" rel="noreferrer" target="_blank">
+          <img alt="React logo" className="logo react" src={reactLogo} />
         </a>
       </div>
       <h1>Vite + React</h1>
-      <div className='card'>
-        <button type='button' onClick={() => setCount(prevCount => prevCount + 1)}>
+      <div className="card">
+        <button
+          type="button"
+          onClick={() => setCount((prevCount) => prevCount + 1)}
+        >
           count is {count}
         </button>
+        <SumCalculator />
         <p>
           Edit <code>src/App.jsx</code> and save to test HMR
         </p>
       </div>
-      <p className='read-the-docs'>Click on the Vite and React logos to learn more</p>
+      <p className="read-the-docs">
+        Click on the Vite and React logos to learn more
+      </p>
     </>
   );
 };
